@@ -2,16 +2,10 @@ class node {
   constructor(
     public id: string,
     public parent: node[] = [],
-    public discoveryTime = -1,
-    public finishTime = -1,
-    public color = "white",
     public children: node[] = []
   ) {
     this.id = id;
-    this.discoveryTime = discoveryTime;
-    this.finishTime = finishTime;
     this.parent = parent;
-    this.color = color;
   }
 
   addChild(child: node) {

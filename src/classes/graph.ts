@@ -1,7 +1,6 @@
 import { node } from "./node";
 
 class graph {
-  time = 0;
   matrix: number[][] = [];
   nodes: node[] = [];
 
@@ -23,9 +22,11 @@ class graph {
       parent.addChild(child);
       child.addParent(parent);
     }
+
+    this.getAdjacencyMatrix();
   }
 
-  print() {
+  printAdjacencyList() {
     this.nodes.forEach((node) => {
       console.log(node.id + " -> " + node.children.map((node) => node.id));
     });
@@ -48,8 +49,6 @@ class graph {
   }
 
   printAdjacencyMatrix() {
-    this.getAdjacencyMatrix();
-
     let str = "  ";
 
     this.nodes.forEach((node) => {
@@ -68,8 +67,6 @@ class graph {
   }
 
   isReflexive() {
-    this.getAdjacencyMatrix();
-
     for (let i = 0; i < this.matrix.length; i++) {
       if (this.matrix[i][i] !== 1) {
         return false;
@@ -80,8 +77,6 @@ class graph {
   }
 
   isSymmetric() {
-    this.getAdjacencyMatrix();
-
     for (let i = 0; i < this.matrix.length; i++) {
       for (let j = 0; j < this.matrix.length; j++) {
         if (this.matrix[i][j] !== this.matrix[j][i]) {
@@ -94,8 +89,6 @@ class graph {
   }
 
   isAssymetric() {
-    this.getAdjacencyMatrix();
-
     for (let i = 0; i < this.matrix.length; i++) {
       for (let j = 0; j < this.matrix.length; j++) {
         if (i !== j && this.matrix[i][j] === this.matrix[j][i]) {
@@ -112,8 +105,6 @@ class graph {
   }
 
   isAntiSymmetric() {
-    this.getAdjacencyMatrix();
-
     for (let i = 0; i < this.matrix.length; i++) {
       for (let j = 0; j < this.matrix.length; j++) {
         if (i !== j && this.matrix[i][j] === 1 && this.matrix[j][i] === 1) {

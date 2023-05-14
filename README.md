@@ -6,7 +6,7 @@
 $ git clone git@github.com:samufacanha2/adjacency-matrix-properties.git
 ```
 
-2 - run the following command in the terminal:
+2 - run the following command in the terminal inside the folder of the project:
 
 ```bash
 $ npm install && npm build

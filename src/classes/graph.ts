@@ -91,7 +91,11 @@ class graph {
   isAssymetric() {
     for (let i = 0; i < this.matrix.length; i++) {
       for (let j = 0; j < this.matrix.length; j++) {
-        if (i !== j && this.matrix[i][j] === this.matrix[j][i]) {
+        if (
+          i !== j &&
+          this.matrix[i][j] === this.matrix[j][i] &&
+          this.matrix[i][j] === 1
+        ) {
           return false;
         } else if (i === j) {
           if (this.matrix[i][j] !== 0) {

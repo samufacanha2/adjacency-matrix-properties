@@ -6,8 +6,8 @@ const graph1 = new graph();
 //Terminal = T
 //Shopping = S
 //Centro = C
-//Praça = R
 //Avenida = A
+//Praça = R
 
 graph1.addNode("P", "P");
 graph1.addNode("T", "T");
@@ -33,7 +33,15 @@ graph1.addNode("R", "C");
 
 graph1.printAdjacencyMatrix();
 
-console.log("isReflexive: ", graph1.isReflexive());
-console.log("isSymmetric: ", graph1.isSymmetric());
-console.log("isAssymetric: ", graph1.isAssymetric());
-console.log("isAntiSymmetric: ", graph1.isAntiSymmetric());
+console.log(`isReflexive: ${graph1.isReflexive()}
+isSymmetric: ${graph1.isSymmetric()}
+isAssymetric: ${graph1.isAssymetric()}
+isAntiSymmetric: ${graph1.isAntiSymmetric()}
+
+ - Parque   = P
+ - Terminal = T
+ - Shopping = S
+ - Centro   = C
+ - Avenida  = A
+ - Praça    = R
+`);

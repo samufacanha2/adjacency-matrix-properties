@@ -20,7 +20,6 @@ class graph {
 
     if (parent && child) {
       parent.addChild(child);
-      child.addParent(parent);
     }
 
     this.getAdjacencyMatrix();

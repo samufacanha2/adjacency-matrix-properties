@@ -1,11 +1,6 @@
 class node {
-  constructor(
-    public id: string,
-    public parent: node[] = [],
-    public children: node[] = []
-  ) {
+  constructor(public id: string, public children: node[] = []) {
     this.id = id;
-    this.parent = parent;
   }
 
   addChild(child: node) {
@@ -18,10 +13,6 @@ class node {
 
   hasChild(child: node) {
     return this.children.some((node) => node.id === child.id);
-  }
-
-  addParent(parent: node) {
-    this.parent.push(parent);
   }
 }
 

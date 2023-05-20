@@ -38,10 +38,10 @@ isSymmetric: ${graph1.isSymmetric()}
 isAssymetric: ${graph1.isAssymetric()}
 isAntiSymmetric: ${graph1.isAntiSymmetric()}
 
- - Parque   = P
+ - Parque   = PQ
  - Terminal = T
  - Shopping = S
  - Centro   = C
  - Avenida  = A
- - Praça    = R
+ - Praça    = PR
 `);
